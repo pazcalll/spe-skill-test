@@ -31,14 +31,13 @@ class SpeSkillTest{
                 $odd += 1;
                 $oddKey[] = $key;
             }
+
+            if (($odd > 0) && ($even > 0)) {
+                if ($odd > $even) echo nl2br("$arrayNum[$key] (the only odd number) \r\n");
+                elseif ($odd < $even) echo nl2br("$arrayNum[$key] (the only even number) \r\n");
+                else echo nl2br("false (all odd integer, no outlier \r\n)");
+            }
         }
-
-        $odd =$odd-1;
-        $even =$even-1;
-
-        if ($odd > $even) echo nl2br("$oddKey[$odd] (the only odd number) \r\n");
-        elseif ($odd < $even) echo nl2br("$evenKey[$even] (the only even number) \r\n");
-        else echo nl2br("false (all odd integer, no outlier \r\n)");
     }
 
     public static function findNeedle($array, $str) {
