@@ -48,6 +48,20 @@ class SpeSkillTest{
             }
         }
     }
+
+    public static function blueOcean($array1, $array2) {
+        $arr1New = [];
+
+        foreach ($array2 as $key2 => $value2) {
+            foreach ($array1 as $key1 => $value1) {
+                if ($value1 != $value2) {
+                    $arr1New[] = $value1;
+                }
+            }
+        }
+
+        print_r($arr1New);
+    }
 }
 
 SpeSkillTest::narcissistic(111);
@@ -58,3 +72,6 @@ SpeSkillTest::parityoutliner([160, 3, 1719, 19, 11, 13, -21]);
 SpeSkillTest::parityoutliner([11, 13, 15, 19, 9, 13, -21]);
 
 SpeSkillTest::findNeedle(["red", "blue", "yellow", "black", "grey"], "blue");
+
+SpeSkillTest::blueOcean([1,5,5,5,5,3], [5]);
+SpeSkillTest::blueOcean([1,2,3,4,6,10], [1]);
