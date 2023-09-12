@@ -41,6 +41,13 @@ class SpeSkillTest{
         else echo nl2br("false (all odd integer, no outlier \r\n)");
     }
 
+    public static function findNeedle($array, $str) {
+        foreach ($array as $key => $val) {
+            if ($val == $str) {
+                echo nl2br($key."\n");
+            }
+        }
+    }
 }
 
 SpeSkillTest::narcissistic(111);
@@ -49,3 +56,5 @@ SpeSkillTest::narcissistic(153);
 SpeSkillTest::parityoutliner([2, 4, 0, 100, 4, 11, 2602, 36]);
 SpeSkillTest::parityoutliner([160, 3, 1719, 19, 11, 13, -21]);
 SpeSkillTest::parityoutliner([11, 13, 15, 19, 9, 13, -21]);
+
+SpeSkillTest::findNeedle(["red", "blue", "yellow", "black", "grey"], "blue");
